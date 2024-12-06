@@ -33,11 +33,13 @@
                 <div
                     class="absolute inset-0 bg-gradient-to-r from-sky-500 via-purple-500 to-pink-500 rounded-xl p-[2px]">
                 </div>
-                <img alt="Tailwind CSS Navbar component" src="img/logo.jpg" class="rounded-lg relative z-10">
+                <a href="index.html">
+                    <img alt="Tailwind CSS Navbar component" src="img/logo.jpg" class="rounded-lg relative z-10">
+                </a>
             </div>
         </div>
     </header>
-    
+
     <section>
         <section class="flex justify-items-center">
             <div
@@ -57,14 +59,14 @@
                                 IN
                                 WITH USER NAME</label>
                             <input type="text" id="username" name="username"
-                                class="pl-5 block rounded-lg w-full lg:w-[580px] h-[35px] lg:h-[40px] mt-3 bg-white text-black" placeholder="Enter Your Username"
-                                required>
+                                class="pl-5 block rounded-lg w-full lg:w-[580px] h-[35px] lg:h-[40px] mt-3 bg-white text-black"
+                                placeholder="Enter Your Username" required>
                         </div>
                         <div class="mt-5 lg:mt-10">
                             <label for="password" class="block text-sm lg:text-base text-bold">PASSWORD</label>
                             <input type="password" id="password" name="password"
-                                class="pl-5 block rounded-lg w-full lg:w-[580px] h-[35px] lg:h-[40px] mt-3 bg-white text-black" placeholder="Enter Password" required
-                                required>
+                                class="pl-5 block rounded-lg w-full lg:w-[580px] h-[35px] lg:h-[40px] mt-3 bg-white text-black"
+                                placeholder="Enter Password" required required>
                         </div>
                         <div class="mt-5 lg:mt-10 text-center">
                             <button type="submit"
@@ -74,7 +76,7 @@
                         </div>
                     </form>
                     <div class="text-center mt-5 lg:mt-6">
-                        <a href="#help" class="text-sky-500 underline hover:text-sky-700">Help, I can't sign in!</a>
+                        <a href="forgotpass.html" class="text-sky-500 underline hover:text-sky-700">Help, I can't sign in! Forgot Password?</a>
                     </div>
                 </div>
             </div>
@@ -88,10 +90,12 @@
             </h1>
         </div>
         <div class="flex flex-col lg:flex-row gap-5 mb-5">
-            <button type="submit"
-                class="text-bold w-full lg:w-[300px] h-[45px] font-bold bg-gradient-to-r from-sky-500 to-purple-500 text-transparent text-white rounded-lg">
-                Create an account as buyer
-            </button>
+            <a href="newacc.html">
+                <button type="submit"
+                    class="text-bold w-full lg:w-[300px] h-[45px] font-bold bg-gradient-to-r from-sky-500 to-purple-500 text-transparent text-white rounded-lg">
+                    Create an account as buyer
+                </button>
+            </a>
             <a href="devacc.html">
                 <button type="button"
                     class="px-3 text-bold w-full lg:w-[300px] h-[45px] font-bold bg-gradient-to-r from-sky-500 to-purple-500 text-transparent text-white rounded-lg">

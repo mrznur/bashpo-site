@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Developer Sign Up</title>
+    <title>New User Sign Up</title>
     <link href="https://cdn.jsdelivr.net/npm/daisyui@4.12.10/dist/full.min.css" rel="stylesheet" type="text/css" />
     <script>
         tailwind.config = {
@@ -42,39 +42,43 @@
     <section class="flex mt-5 flex-col md:flex-row">
         <div class="bg-gradient-to-r from-blue-800 to-blue-900 pr-20 md:w-1/2">
             <div class="ml-7 lg:ml-20 text-white">
-                <h1 class="text-bold text-2xl mt-3">CREATE DEVELOPER ACCOUNT</h1>
-                <form id="developerForm" action="your-server-endpoint" method="POST" class="mt-10"
+                <h1 class="text-bold text-2xl mt-3">CREATE BUYER ACCOUNT</h1>
+                <form id="buyerForm" action="your-server-endpoint" method="POST" class="mt-10"
                     onsubmit="return validateForm()">
-                    <p class="text-l text-bold">Developer Name</p>
-                    <input type="text" id="developer-name" name="developer_name"
+                    <p class="text-l text-bold">Enter Your Name</p>
+                    <input type="text" id="user-name" name="user_name"
                         class="pl-5 block rounded-lg w-full lg:w-[500px] h-[35px] lg:h-[40px] mt-3 bg-white text-black"
-                        placeholder="Enter Developer Name" required>
+                        placeholder="Enter Your Name here" required>
 
-                    <p class="text-l text-bold mt-5">Enter Developer Company Name</p>
-                    <input type="text" id="company-name" name="company_name"
+                    <p class="text-l text-bold mt-5">Enter Your Email</p>
+                    <input type="text" id="user-email" name="user_email"
                         class="pl-5 block rounded-lg w-full lg:w-[500px] h-[35px] lg:h-[40px] mt-3 bg-white text-black"
-                        placeholder="Enter Developer Company Name" required>
-
-                    <p class="text-l text-bold mt-5">Enter Company Email</p>
-                    <input type="email" id="company-email" name="company_email"
-                        class="pl-5 block rounded-lg w-full lg:w-[500px] h-[35px] lg:h-[40px] mt-3 bg-white text-black"
-                        placeholder="Enter Company Email" required>
-
-                    <p class="text-l text-bold mt-5">Enter Publisher (if any)</p>
-                    <select id="publisher" name="publisher"
-                        class="pl-5 block rounded-lg w-full lg:w-[500px] h-[40px] mt-3 bg-white text-black" required>
-                        <option value="" disabled selected>Select Publisher</option>
-                        <option value="bandai_namco">Bandai Namco</option>
-                        <option value="playstation_publishing">Playstation Publishing</option>
-                        <option value="xbox_game_studios">Xbox Game Studios</option>
-                        <option value="square_enix">SquareEnix</option>
-                        <option value="self">Self</option>
-                    </select>
+                        placeholder="Enter Your Email here" required>
 
                     <p class="text-l text-bold mt-5">Enter Password</p>
                     <input type="password" id="password" name="password"
                         class="pl-5 block rounded-lg w-full lg:w-[500px] h-[35px] lg:h-[40px] mt-3 bg-white text-black"
                         placeholder="Enter Password" required>
+
+                    <p class="text-l text-bold mt-5">Enter Your Address</p>
+                    <input type="email" id="user-address" name="user_address"
+                        class="pl-5 block rounded-lg w-full lg:w-[500px] h-[35px] lg:h-[40px] mt-3 bg-white text-black"
+                        placeholder="Enter Your Address here" required>
+
+                    <p class="text-l text-bold mt-5">Enter Store Region (cannot be changed later)</p>
+                    <select id="store-region" name="store_region"
+                        class="pl-5 block rounded-lg w-full lg:w-[500px] h-[40px] mt-3 bg-white text-black" required>
+                        <option value="" disabled selected>Select Region</option>
+                        <option value="north_america">North America(NA)</option>
+                        <option value="latin_america">Latin America(LA)</option>
+                        <option value="europe">Europe(EU)</option>
+                        <option value="asia">Asia(ASI)</option>
+                    </select>
+
+                    <p class="text-l text-bold mt-5">Enter Your Card Info</p>
+                    <input type="text" id="user-card-info" name="user_card_info"
+                        class="pl-5 block rounded-lg w-full lg:w-[500px] h-[35px] lg:h-[40px] mt-3 bg-white text-black"
+                        placeholder="Enter Your Card Info here" required>
 
                     <div id="error-message" class="text-red-500 text-center mt-3 hidden">Please fill in all fields.
                     </div>
@@ -97,13 +101,14 @@
 
     <script>
         function validateForm() {
-            const developerName = document.getElementById('developer-name').value;
-            const companyName = document.getElementById('company-name').value;
-            const companyEmail = document.getElementById('company-email').value;
-            const publisher = document.getElementById('publisher').value;
+            const userName = document.getElementById('user-name').value;
+            const userEmail = document.getElementById('user-email').value;
             const password = document.getElementById('password').value;
+            const userAddress = document.getElementById('user-address').value;
+            const storeRegion = document.getElementById('store-region').value;
+            const userCardInfo = document.getElementById('user-card-info').value;
 
-            if (!developerName || !companyName || !companyEmail || !publisher || !password) {
+            if (!userName || !userEmail || !password || !userAddress || !storeRegion || !userCardInfo) {
                 document.getElementById('error-message').classList.remove('hidden');
                 return false;
             }
