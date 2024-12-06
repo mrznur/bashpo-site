@@ -26,19 +26,68 @@
 </head>
 
 <body class="font-inter">
-    <section>
-        <section>
-            <div class="navbar bg-base-100 justify-start rounded-lg">
-                <div class="ml-5 lg:ml-20 mt-5 w-[80px] lg:w-[120px] relative">
-                    <div class="absolute inset-0 bg-gradient-to-r from-sky-500 via-purple-500 to-pink-500 rounded-xl p-[2px]"></div>
-                    <img alt="Tailwind CSS Navbar component" src="img/logo.jpg" class="rounded-lg relative z-10">
+    <header>
+        <div class="navbar bg-base-100 justify-start rounded-lg">
+            <div class="ml-5 lg:ml-20 mt-5 w-[80px] lg:w-[120px] relative">
+                <div
+                    class="absolute inset-0 bg-gradient-to-r from-sky-500 via-purple-500 to-pink-500 rounded-xl p-[2px]">
                 </div>
-            </div>    
-        </section>
+                <img alt="Tailwind CSS Navbar component" src="img/logo.jpg" class="rounded-lg relative z-10">
+            </div>
+        </div>
+    </header>
 
+    <section class="flex mt-5">
+        <div class="bg-gradient-to-r from-blue-800 to-blue-900 pr-20">
+            <div class="ml-20 text-white">
+                <h1 class="text-bold text-2xl mt-3">CREATE DEVELOPER ACCOUNT</h1>
+                <form action="your-server-endpoint" method="POST" class="mt-10">
+                    <p class="text-l text-bold">Developer Name</p>
+                    <input type="text" id="developer-name" name="developer_name"
+                        class="block rounded-lg w-full lg:w-[500px] h-[35px] lg:h-[40px] mt-3 bg-white text-black"
+                        placeholder="Enter Developer Name" required>
+
+                    <p class="text-l text-bold mt-5">Enter Developer Company Name</p>
+                    <input type="text" id="company-name" name="company_name"
+                        class="block rounded-lg w-full lg:w-[500px] h-[35px] lg:h-[40px] mt-3 bg-white text-black"
+                        placeholder="Enter Developer Company Name" required>
+
+                    <p class="text-l text-bold mt-5">Enter Company Email</p>
+                    <input type="email" id="company-email" name="company_email"
+                        class="block rounded-lg w-full lg:w-[500px] h-[35px] lg:h-[40px] mt-3 bg-white text-black"
+                        placeholder="Enter Company Email" required>
+
+                    <p class="text-l text-bold mt-5">Enter Publisher (if any)</p>
+                    <select id="publisher" name="publisher"
+                        class="block rounded-lg w-full lg:w-[500px] h-[40px] mt-3 bg-white text-black" required>
+                        <option value="" disabled selected>Select Publisher</option>
+                        <option value="bandai_namco">Bandai Namco</option>
+                        <option value="playstation_publishing">Playstation Publishing</option>
+                        <option value="xbox_game_studios">Xbox Game Studios</option>
+                        <option value="square_enix">SquareEnix</option>
+                        <option value="self">Self</option>
+                    </select>
+
+                    <p class="text-l text-bold mt-5">Enter Password</p>
+                    <input type="password" id="password" name="password"
+                        class="block rounded-lg w-full lg:w-[500px] h-[35px] lg:h-[40px] mt-3 bg-white text-black"
+                        placeholder="Enter Password" required>
+                    <div class="mt-6 text-center mb-10">
+                        <button type="submit"
+                            class="w-[300px] h-[50px] bg-gradient-to-r from-blue-500 to-purple-600 text-white rounded-lg text-bold">
+                            Create Account
+                        </button>
+                    </div>
+                </form>
+
+            </div>
+        </div>
+        <div
+            class="justify-items-center relative bg-[url('./img/bg-1.jpg')] bg-cover bg-center w-full h-[500px] lg:h-[800px]">
+            <div class="absolute inset-0 bg-blue-800 opacity-40 z-0"></div>
+
+        </div>
     </section>
-
-
 </body>
 
 </html>
