@@ -37,11 +37,11 @@
             </div>
         </div>
     </header>
+    
     <section>
         <section class="flex justify-items-center">
             <div
                 class="justify-items-center relative mt-5 bg-[url('./img/bg-1.jpg')] bg-cover bg-center w-full h-[500px] lg:h-[800px]">
-                <div class="absolute inset-0 bg-blue-800 opacity-20 z-0"></div>
                 <div class="text-center mt-10">
                     <h2
                         class="text-2xl lg:text-3xl font-bold bg-gradient-to-r from-sky-500 via-purple-500 to-pink-500 text-transparent bg-clip-text">
@@ -50,7 +50,7 @@
                 </div>
                 <div
                     class="justify-start lg:justify-items-center mx-auto mt-5 lg:mt-10 box-border h-auto w-[300px] lg:h-[400px] lg:w-[700px] p-4 border rounded-3xl bg-[rgba(30,29,55,1)]">
-                    <form action="your-server-endpoint" method="POST" class="mt-5 lg:mt-10">
+                    <form onsubmit="handleFormSubmit(event)" class="mt-5 lg:mt-10">
                         <div class="mt-5 lg:mt-10">
                             <label for="username"
                                 class="block text-sm lg:text-base text-bold font-bold bg-gradient-to-r from-sky-500 via-purple-500 to-pink-500 text-transparent bg-clip-text">SIGN
@@ -100,6 +100,15 @@
             </a>
         </div>
     </section>
+
+    <script>
+        function handleFormSubmit(event) {
+            event.preventDefault();  // Prevents the form from submitting to a server
+            const username = document.getElementById('username').value;
+            const password = document.getElementById('password').value;
+            console.log('Form submitted with:', { username, password });
+        }
+    </script>
 </body>
 
 </html>
