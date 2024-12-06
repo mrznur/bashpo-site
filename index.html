@@ -29,8 +29,7 @@
     <section>
         <section>
             <div class="navbar bg-base-100 justify-start rounded-lg">
-
-                <div class="ml-20 mt-5 w-[120px] ">
+                <div class="ml-5 lg:ml-20 mt-5 w-[80px] lg:w-[120px]">
                     <img alt="Tailwind CSS Navbar component" src="img/logo.jpg" class="rounded-lg">
                 </div>
             </div>
@@ -38,43 +37,58 @@
 
         <section class="flex justify-items-center">
             <div
-                class="justify-items-center relative mt-5 bg-[url('./img/bg-1.jpg')] bg-cover bg-center w-full h-[800px]  bg-blue-700">
-                <div class="mt-10 justify-start">
-                    <h2 class="text-3xl font-bold">
-                        SIGN IN
-                    </h2>
+                class="justify-items-center relative mt-5 bg-[url('./img/bg-1.jpg')] bg-cover bg-center w-full h-[500px] lg:h-[800px]">
+                <div class="text-center mt-10">
+                    <h2 class="text-2xl lg:text-3xl font-bold">SIGN IN</h2>
                 </div>
                 <div
-                    class="justify-start mt-20 box-border h-[400px] w-[700px] p-4 border rounded-3xl bg-[rgba(30,29,55,1)]">
-                    <form action="your-server-endpoint" method="POST" class="ml-10 mt-10">
-                        <div class="mt-10">
-                            <label for="username" class="text-l text-bold text-sky-500">SIGN IN WITH USER NAME</label>
+                    class="justify-start mx-auto mt-5 lg:mt-10 box-border h-auto w-[300px] lg:h-[400px] lg:w-[700px] p-4 border rounded-3xl bg-[rgba(30,29,55,1)]">
+                    <form action="your-server-endpoint" method="POST" class="mt-5 lg:mt-10">
+                        <div class="mt-5 lg:mt-10">
+                            <label for="username" class="block text-sm lg:text-base text-bold text-sky-500">SIGN IN
+                                WITH USER NAME</label>
                             <input type="text" id="username" name="username"
-                                class="rounded-lg w-[580px] h-[40px] mt-3 bg-white text-black" required>
+                                class="block rounded-lg w-full lg:w-[580px] h-[35px] lg:h-[40px] mt-3 bg-white text-black"
+                                required>
                         </div>
-                        <div class="mt-10">
-                            <label for="password" class="text-l text-bold">PASSWORD</label>
+                        <div class="mt-5 lg:mt-10">
+                            <label for="password" class="block text-sm lg:text-base text-bold">PASSWORD</label>
                             <input type="password" id="password" name="password"
-                                class="rounded-lg w-[580px] h-[40px] mt-3 bg-white text-black" required>
+                                class="block rounded-lg w-full lg:w-[580px] h-[35px] lg:h-[40px] mt-3 bg-white text-black"
+                                required>
                         </div>
-                        <div class="mt-10 text-center">
-                            <button type="submit" class="text-bold w-[250px] h-[50px] bg-sky-600 text-white rounded-lg">SIGN
-                                IN</button>
+                        <div class="mt-5 lg:mt-10 text-center">
+                            <button type="submit"
+                                class="w-full w-[100px] lg:w-[250px] h-[45px] lg:h-[50px] bg-sky-600 text-white rounded-lg">
+                                SIGN IN
+                            </button>
                         </div>
                     </form>
-                    <div class="text-center mt-6">
+                    <div class="text-center mt-5 lg:mt-6">
                         <a href="#help" class="text-sky-500 underline hover:text-sky-700">Help, I can't sign in!</a>
                     </div>
                 </div>
-
             </div>
         </section>
     </section>
-    <section>
 
+    <section class="flex flex-col items-center justify-center p-5 lg:p-0">
+        <div class="text-center mt-5 mb-5">
+            <h1 class="text-2xl lg:text-3xl font-bold">
+                New to Bashpo?
+            </h1>
+        </div>
+        <div class="flex flex-col lg:flex-row gap-5 mb-5">
+            <button type="submit"
+                class="text-bold w-full lg:w-[300px] h-[45px] bg-sky-600 text-white rounded-lg">
+                Create an account as buyer
+            </button>
+            <button type="submit"
+                class="text-bold w-full lg:w-[300px] h-[45px] bg-sky-600 text-white rounded-lg">
+                Create an account as developer
+            </button>
+        </div>
     </section>
-
-
 </body>
 
 </html>
