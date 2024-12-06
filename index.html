@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="dark">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bashpo</title>
+    <link href="https://cdn.jsdelivr.net/npm/daisyui@4.12.10/dist/full.min.css" rel="stylesheet" type="text/css" />
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    fontFamily: {
+                        inter: ['Inter', 'sans-serif'],
+                    },
+                },
+            },
+        };
+    </script>
+
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Manrope:wght@200..800&display=swap"
+        rel="stylesheet">
+
+</head>
+
+<body class="font-inter">
+    <section>
+        <section>
+            <div class="navbar bg-base-100 justify-start rounded-lg">
+
+                <div class="ml-20 mt-5 w-[120px] ">
+                    <img alt="Tailwind CSS Navbar component" src="img/logo.jpg" class="rounded-lg">
+                </div>
+            </div>
+        </section>
+
+        <section class="flex justify-items-center">
+            <div
+                class="justify-items-center relative mt-5 bg-[url('./img/bg-1.jpg')] bg-cover bg-center w-full h-[800px]  bg-blue-700">
+                <div class="mt-10 justify-start">
+                    <h2 class="text-3xl font-bold">
+                        SIGN IN
+                    </h2>
+                </div>
+                <div
+                    class="justify-start mt-20 box-border h-[400px] w-[700px] p-4 border rounded-3xl bg-[rgba(30,29,55,1)]">
+                    <form action="your-server-endpoint" method="POST" class="ml-10 mt-10">
+                        <div class="mt-10">
+                            <label for="username" class="text-l text-bold text-sky-500">SIGN IN WITH USER NAME</label>
+                            <input type="text" id="username" name="username"
+                                class="rounded-lg w-[580px] h-[40px] mt-3 bg-white text-black" required>
+                        </div>
+                        <div class="mt-10">
+                            <label for="password" class="text-l text-bold">PASSWORD</label>
+                            <input type="password" id="password" name="password"
+                                class="rounded-lg w-[580px] h-[40px] mt-3 bg-white text-black" required>
+                        </div>
+                        <div class="mt-10 text-center">
+                            <button type="submit" class="text-bold w-[250px] h-[50px] bg-sky-600 text-white rounded-lg">SIGN
+                                IN</button>
+                        </div>
+                    </form>
+                    <div class="text-center mt-6">
+                        <a href="#help" class="text-sky-500 underline hover:text-sky-700">Help, I can't sign in!</a>
+                    </div>
+                </div>
+
+            </div>
+        </section>
+    </section>
+    <section>
+
+    </section>
+
+
+</body>
+
+</html>
