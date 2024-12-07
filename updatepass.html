@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="dark">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Update Password</title>
+    <link href="https://cdn.jsdelivr.net/npm/daisyui@4.12.10/dist/full.min.css" rel="stylesheet" type="text/css" />
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    fontFamily: {
+                        inter: ['Inter', 'sans-serif'],
+                    },
+                },
+            },
+        };
+    </script>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Manrope:wght@200..800&display=swap"
+        rel="stylesheet">
+</head>
+
+<body class="font-inter bg-neutral-900 text-white">
+    <header>
+        <div class="navbar bg-base-100 justify-start rounded-lg">
+            <div class="ml-5 lg:ml-20 mt-5 px-0.5 py-0.5 w-[80px] lg:w-[120px] relative">
+                <div
+                    class="absolute inset-0 bg-gradient-to-r from-sky-700 via-purple-400 to-violet-700 rounded-xl p-[2px]">
+                </div>
+                <a href="index.html">
+                    <img alt="Logo" src="img/logo.jpg" class="rounded-lg relative z-10">
+                </a>
+            </div>
+        </div>
+    </header>
+
+    <section class="mt-5 pb-5 flex justify-center items-center">
+        <div
+            class="rounded-xl bg-gradient-to-r from-neutral-700 via-neutral-500 to-neutral-700 w-full max-w-md p-8 shadow-lg">
+            <h1 class="text-2xl font-bold mb-6 text-center">UPDATE PASSWORD</h1>
+            <form id="updatePasswordForm" action="your-server-endpoint" method="POST" onsubmit="return validateForm()">
+                <label for="new-password" class="block font-bold mb-2">Enter New Password</label>
+                <input type="password" id="new-password" name="new_password"
+                    class="block w-full rounded-lg h-10 px-3 bg-white text-black mb-5" placeholder="Enter New Password"
+                    required>
+
+                <label for="confirm-password" class="block font-bold mb-2">Confirm New Password</label>
+                <input type="password" id="confirm-password" name="confirm_password"
+                    class="block w-full rounded-lg h-10 px-3 bg-white text-black mb-5"
+                    placeholder="Confirm New Password" required>
+
+                <div id="error-message" class="text-red-500 text-center mt-3 hidden">Please fill in all fields
+                    correctly.</div>
+
+                <button type="submit"
+                    class="w-full mt-6 h-12 bg-gradient-to-r from-green-500 to-green-700 text-white font-bold rounded-lg hover:opacity-90">
+                    Update Password
+                </button>
+            </form>
+        </div>
+    </section>
+
+    <script>
+        function validateForm() {
+            const newPassword = document.getElementById('new-password').value.trim();
+            const confirmPassword = document.getElementById('confirm-password').value.trim();
+            const errorMessage = document.getElementById('error-message');
+
+            // Clear error message
+            errorMessage.classList.add('hidden');
+            errorMessage.textContent = "";
+
+            // Validation logic
+            if (!newPassword || !confirmPassword) {
+                errorMessage.textContent = "All fields are required.";
+                errorMessage.classList.remove('hidden');
+                return false;
+            }
+
+            if (newPassword !== confirmPassword) {
+                errorMessage.textContent = "Passwords do not match.";
+                errorMessage.classList.remove('hidden');
+                return false;
+            }
+
+            if (newPassword.length < 8) {
+                errorMessage.textContent = "Password must be at least 8 characters long.";
+                errorMessage.classList.remove('hidden');
+                return false;
+            }
+
+            // All validations passed
+            return true;
+        }
+    </script>
+</body>
+
+</html>
